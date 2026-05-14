@@ -2,6 +2,9 @@ name: Build SHRP
 
 on:
   workflow_dispatch:
+
+permissions:
+  contents: write
   
 jobs:
   build_recovery:
@@ -117,4 +120,4 @@ jobs:
             
             :rocket: *Built with love by GitHub Actions.*
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
