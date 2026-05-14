@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [SM-A546E, SM-A546B, SM-A546S, SM-A546U, SM-A546U1, SM-A546W, SM-A5460, SM-A546V]
+        target: [SM-A546E, SM-A546B]
         
     steps:          
       - name: Cleanup
@@ -86,7 +86,7 @@ jobs:
 
       - name: Cloning Trees
         run: |
-          git clone --branch twrp-12.1 https://github.com/Vaz15k/android_device_samsung_a54x.git device/samsung/a54x
+          git clone --branch twrp-12.1 https://github.com/MrDemonc/android_device_samsung_a54x.git device/samsung/a54x
         working-directory: ./twrp-12.1
 
       - name: Build Recovery
